@@ -1,26 +1,31 @@
 ---
 title: Universally Recognized TimeStamp
-ver: v0.0.5.7
-date: Wed Apr  7 11:01:26 AM CEST 2021
-playload: Qmb3RJebnVhFHxWJXHogNZZysnghpCJkRJub7UuG6n9dJx
-nip: 0.0.0.0
-tic: 1617786086
-ns: 273073803
+ver: 0.0
+date: Fri Apr  2 10:53:56 AM CEST 2021
+playload: QmUNLLsPACCz1vLxQVkXqqLX5R1X345qqfHbsf67hvA3Nn
+nip: 194.230.146.87
+tic: 1617353635
+ns: 114590162
 loc: 'Ecublens (Switzerland)'
 user: michelc
 intent: "a timestamp made w/ ♡ that everyone agrees"
-qm: QmTT5Y6UhHPh7ZVMV9fgEbhKjGsvNVHAN6XMRTzAtL2k2J
-ipns: /ipfs/QmaegryVopmfm3bt7kxwGChxPsFhJqbmZQNpqfNYZxxjt4
-gitid: 089cae5
-dgit: QmTh73A3ECGD2hDXeHT5qWigRy6Nw5cvanjuvtiPFTVrpb
+qm: QmdfTbBqBPQ7VNxZEYEj14VmRuZBkqFbiwReogJgS1zR1n
+ipns: /ipfs/QmUNLLsPACCz1vLxQVkXqqLX5R1X345qqfHbsf67hvA3Nn
+gitid: dcf5b16e76cce7425d0beaef62d79a7d10fce1f5
+dgit: QmekkpM5xEpbxGnbc9WXszVNwHDQgb2RgV7NismP3eQwMA
 ---
+<meta charset="utf8">
 
 I undersign, Michel G. Combes located in $loc$
-certifie that the date is ``$date$``
+certify that
+ the data which hash is [$qm$][1] existed on the date of ``$date$``,
 
 <br>+Michel (aka Dr I·T)
-date: Wed Apr  7 11:01:26 AM CEST 2021
-location: $loc$
-<br>--&nbsp;<br>
-$intent$
+<br>date: $date$
+<br>location: $loc$
+<br>--&nbsp;
+<br>$intent$
 <br>(ip: $nip$)
+
+
+[1]: https://gateway.ipfs.io/ipfs/$qm$
