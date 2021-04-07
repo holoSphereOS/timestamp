@@ -42,6 +42,9 @@ rm -f original-timestamp.md original-timestamp.md.asc
 gpg --batch -o original-timestamp.md --verify original-timestamp.md.gpg
 gpg --clear-sign -a -u "Michel G. Combes" original-timestamp.md
 
+if expr $tic -  $(stat -c '%X' nip.txt) \> 1711 ; then
+ rm nip.txt
+fi
 if [ ! -e nip.txt ]; then
 curl https://iph.heliohost.org/cgi-bin/remote_addr.pl > nip.txt
 echo $tic >> nip.txt
@@ -135,6 +138,14 @@ curl -I https://organicgit.github.io/timestamp/timestamp.htm >> curl.log
 git push gitlab
 echo curl -I https://gitlab.com/gradual-archi/timestamp/-/raw/master/timestamp.htm >> curl.log
 curl -I https://gitlab.com/gradual-archi/timestamp/-/raw/master/timestamp.htm >> curl.log
+
+cp -p timestamp.htm gist/index.html
+git -C gist add index.html
+git -C gist commit -m "$symb-$(date +%y%m%d%H%M.%S)"
+git -C gist push
+sleep 1
+echo curl -I https://bl.ocks.org/michel47/e001c31cc7eea3cb0032c488f0bb30d3 >> curl.log
+curl -I https://bl.ocks.org/michel47/e001c31cc7eea3cb0032c488f0bb30d3 >> curl.log
 #git push framagit
 #git push bitbucket
 
