@@ -122,3 +122,74 @@ server: cloudflare
 cf-ray: 63c228644f440f4e-MXP
 alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
 
+curl -I https://organicgit.github.io/timestamp/timestamp.htm
+HTTP/2 200 
+server: GitHub.com
+content-type: text/html; charset=utf-8
+strict-transport-security: max-age=31556952
+last-modified: Wed, 07 Apr 2021 09:16:15 GMT
+access-control-allow-origin: *
+etag: "606d785f-147"
+expires: Wed, 07 Apr 2021 09:28:49 GMT
+cache-control: max-age=600
+x-proxy-cache: MISS
+x-github-request-id: C36A:7D4A:2C8F44:2E5146:606D78F9
+accept-ranges: bytes
+date: Wed, 07 Apr 2021 09:18:49 GMT
+via: 1.1 varnish
+age: 0
+x-served-by: cache-fra19180-FRA
+x-cache: MISS
+x-cache-hits: 0
+x-timer: S1617787129.193314,VS0,VE87
+vary: Accept-Encoding
+x-fastly-request-id: e3ae4c3a795ea05727dd7d307a5dad8488c8f665
+content-length: 327
+
+curl -I https://gitlab.com/gradual-archi/timestamp/-/raw/master/timestamp.htm
+HTTP/2 200 
+date: Wed, 07 Apr 2021 09:18:52 GMT
+content-type: text/plain; charset=utf-8
+set-cookie: __cfduid=de6d497af8594439cd9b85e9b0d2e1da31617787132; expires=Fri, 07-May-21 09:18:52 GMT; path=/; domain=.gitlab.com; HttpOnly; SameSite=Lax; Secure
+vary: Accept-Encoding
+cache-control: max-age=60, public
+content-disposition: inline
+etag: W/"8e1e6d43c446bc94893222fbdf66af4f"
+x-content-type-options: nosniff
+x-download-options: noopen
+x-frame-options: DENY
+x-gitlab-feature-category: source_code_management
+x-permitted-cross-domain-policies: none
+x-request-id: 01F2NT16A16DEMN2R569SRHVHQ
+x-runtime: 0.066735
+x-ua-compatible: IE=edge
+x-xss-protection: 1; mode=block
+strict-transport-security: max-age=31536000
+referrer-policy: strict-origin-when-cross-origin
+gitlab-lb: fe-06-lb-gprd
+gitlab-sv: web-15-sv-gprd
+cf-cache-status: EXPIRED
+cf-request-id: 094d39b0cb00002397c71b7000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+server: cloudflare
+cf-ray: 63c22bc7af342397-ZRH
+
+curl -I https://bl.ocks.org/michel47/e001c31cc7eea3cb0032c488f0bb30d3
+HTTP/2 200 
+date: Wed, 07 Apr 2021 09:18:57 GMT
+content-type: text/html; charset=utf-8
+set-cookie: __cfduid=d886d75420b36907f032290f5065871ac1617787137; expires=Fri, 07-May-21 09:18:57 GMT; path=/; domain=.ocks.org; HttpOnly; SameSite=Lax
+content-security-policy: frame-ancestors 'self' *.ocks.org
+cache-control: max-age=300
+last-modified: Wed, 07 Apr 2021 9:18:55 AM GMT
+vary: Accept-Encoding
+via: 1.1 vegur
+cf-cache-status: DYNAMIC
+cf-request-id: 094d39c49b00003745d139b000000001
+expect-ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=7bqEbZ%2Fyzztyp49X8VBZmRj0jgBRXeywCYun%2FmxRQTxyo5nk8CHneXIZETWhngO5rIkjpGSK7Ho0kIVi6R6bQMVXKj2b25nFfrtnIAK8jKpEWbn0ylrJkg%3D%3D"}],"group":"cf-nel","max_age":604800}
+nel: {"max_age":604800,"report_to":"cf-nel"}
+server: cloudflare
+cf-ray: 63c22be759c03745-MXP
+alt-svc: h3-27=":443"; ma=86400, h3-28=":443"; ma=86400, h3-29=":443"; ma=86400
+

@@ -1,18 +1,18 @@
 ---
 title: Universally Recognized TimeStamp
-ver: 0.0
-date: Fri Apr  2 10:53:56 AM CEST 2021
-playload: QmUNLLsPACCz1vLxQVkXqqLX5R1X345qqfHbsf67hvA3Nn
-nip: 194.230.146.87
-tic: 1617353635
-ns: 114590162
+ver: v0.0.5.7
+date: Wed Apr  7 11:17:59 AM CEST 2021
+playload: Qmb3RJebnVhFHxWJXHogNZZysnghpCJkRJub7UuG6n9dJx
+nip: 83.78.4.228
+tic: 1617787079
+ns: 418201801
 loc: 'Ecublens (Switzerland)'
 user: michelc
 intent: "a timestamp made w/ ♡ that everyone agrees"
-qm: QmdfTbBqBPQ7VNxZEYEj14VmRuZBkqFbiwReogJgS1zR1n
-ipns: /ipfs/QmUNLLsPACCz1vLxQVkXqqLX5R1X345qqfHbsf67hvA3Nn
-gitid: dcf5b16e76cce7425d0beaef62d79a7d10fce1f5
-dgit: QmekkpM5xEpbxGnbc9WXszVNwHDQgb2RgV7NismP3eQwMA
+qm: QmV2EG5b6ZZZkENg2hXndY3n9a3RNbY3RBfhMFsofmJVmx
+ipns: /ipfs/Qma7wAFyJftrfZbxdc8P7ebfZ5RHi7NhUMM3R62M94GR7T
+gitid: fdea067
+dgit: QmWsLTcBmVei6oD4FedimhSk8SsGb4NLkkoKXq15ZPSu4U
 ---
 <meta charset="utf8">
 
@@ -21,7 +21,7 @@ certify that
  the data which hash is [$qm$][1] existed on the date of ``$date$``,
 
 <br>+Michel (aka Dr I·T)
-<br>date: $date$
+<br>date: Wed Apr  7 11:17:59 AM CEST 2021
 <br>location: $loc$
 <br>--&nbsp;
 <br>$intent$
