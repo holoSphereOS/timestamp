@@ -64,7 +64,7 @@ pandoc -t html -t plain $artifact/index.html > $artifact/wmeters.txt
 if [ -e timestamp.md ]; then
 mv timestamp.md previous-timestamp.md
 fi
-qm=$(ipfs add -r -w nip.txt $artifact previous-timestamp.md qm.log revs.log dgit.log $pgm --pin=true -Q)
+qm=$(ipfs add -r -w nip.txt $artifact previous-timestamp.md *.log $pgm --pin=true -Q)
 echo qm: $qm
 perl -S fullname.pl -a $qm > bot.yml
 sed -e "s/tic: .*/tic: $tic/" -e "s/ver: .*/ver: $ver/" -e "s/ns: .*/ns: $ns/" \
@@ -112,6 +112,9 @@ if git ls-remote --tags | grep "$ver"; then
 git push --delete $remote "$ver"
 fi
 fi
+git log -3 >> git.log
+perl -S uniq.pl git.log | dee -q git.log
+
 ( cd $gitdir; git --bare update-server-info )
 dgit=$(ipfs add -r $gitdir -Q)
 echo $tic: $dgit >> dgit.log
@@ -119,14 +122,19 @@ echo $tic: $dgit >> dgit.log
 echo "git push : "
 branch=$(git rev-parse --abbrev-ref HEAD)
 git push --follow-tags $remote $branch
-tar zcf ../bal.tgz .
-mv ../bal.tgz .
+tar zcf ../ts-bal.tgz .
+mv ../ts-bal.tgz .
 qm=$(ipfs add -w -r . $gitdir/info/refs -Q);
-echo $(date +"%s%N"): $qm >> bal.log
+echo $(date +"%s%N"): $qm >> ts-bal.log
 ipfs name publish --key=$symb $qm &
 # external party
 pina $qm "$symb-$(date +%y%m%d%H%M.%S)"
 git push github
+echo curl -I https://organicgit.github.io/timestamp/timestamp.htm >> curl.log
+curl -I https://organicgit.github.io/timestamp/timestamp.htm >> curl.log
 git push gitlab
-git push bitbucket
+echo curl -I https://gitlab.com/gradual-archi/timestamp/-/raw/master/timestamp.htm >> curl.log
+curl -I https://gitlab.com/gradual-archi/timestamp/-/raw/master/timestamp.htm >> curl.log
+#git push framagit
+#git push bitbucket
 

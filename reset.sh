@@ -25,11 +25,11 @@ ticns=${tic}114590162
 rm -rf emptyd
 mkdir emptyd
 touch -t $(date +%y%m%d%H%M.%S -d @$tic) emptyd
-(cd emptyd; tar zcf ../bal.tgz .)
+(cd emptyd; tar zcf ../ts-bal.tgz .)
 rm -rf emptyd
-qm=$(ipfs add -w bal.tgz -Q)
-echo "--- # bal logs ..." > bal.log
-echo "$ticns: $qm" >> bal.log
+qm=$(ipfs add -w ts-bal.tgz -Q)
+echo "--- # bal logs ..." > ts-bal.log
+echo "$ticns: $qm" >> ts-bal.log
 echo "$(date +"%s%N"): $qm"
 
 pgm=$0
